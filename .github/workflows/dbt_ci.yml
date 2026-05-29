@@ -8,7 +8,12 @@ on:
 
 jobs:
     run_dbt_jobs:
+
       runs-on: ubuntu-latest
+
+      defaults:
+        run:
+          working-directory: dbt_project
 
       steps:
         - name: Checkout code
