@@ -1,4 +1,5 @@
-# Netflix Data Platform: dbt & DuckDB Pipeline with CI/CD
+
+![dbt CI Pipeline](https://github.com/F-iol/Netflix_titles_pipeline/actions/workflows/dbt_ci.yml/badge.svg)
 
 An end-to-end ELT data pipeline built with **dbt Core** and **DuckDB**, featuring automated Data Quality Gates via **GitHub Actions**.
 
