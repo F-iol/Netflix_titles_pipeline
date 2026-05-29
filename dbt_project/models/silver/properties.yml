@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name: silver_titles
+      columns:
+        - name: title
+          data_tests:
+            - not_null
+      columns:
+        - name: duration
+          data_tests:
+            - not_null
+      columns:
+        - name: rating
+          data_tests:
+            - not_null
+          
+            

@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: local_files
+    schema: main
+    tables:
+      - name: netflix_titles
+        config:
+            materialized: external
+        meta:
+            external_location: "../data/netflix_titles.csv"

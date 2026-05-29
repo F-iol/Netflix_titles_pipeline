@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: bronze_titles
+      description: "This model represents the bronze layer of the Netflix titles data pipeline. It is responsible for ingesting the raw data from the local files source and making it available for transformation in the silver layer."
+      columns:
+        - name: show_id
+          data_tests:
+            - unique
+            - not_null
