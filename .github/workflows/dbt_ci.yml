@@ -19,15 +19,8 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
 
-        - name: Set up Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.10'
+        - name: build docker image
+          run: docker build -t netflix-dbt-pipeline .
 
-        - name: Install dbt
-          run: |
-                pip install --upgrade pip
-                pip install dbt-core dbt-duckdb
-        
-        - name: Run dbt build
-          run: dbt build --profiles-dir . --target dev
+        - name: run dbt build inside docker
+          run: docker run --rm netflix-dbt-pipeline
